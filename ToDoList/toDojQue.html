@@ -175,8 +175,8 @@ $(".addBtn").click(function(){
   $("#myUL").append('<li>'+ ele+'<span class="close">'+"\u00D7"+'</span>'+'</li>');
 }) 
 
-$("li .close").click(function(event){
-  $(event.target).closest( "li" ).remove();
+$("ul").on("click","span",function(event){
+  $(this).parent().remove();
 })
 
 
